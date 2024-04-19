@@ -4,9 +4,11 @@ __pycache__/
 
 # Logs
 *.log
+/logs/
 
 # Configuration files that may contain sensitive information
 *.ini
+/config/hash_encrypt.ini (if it contains sensitive information)
 
 # Secret keys
 key.key
@@ -14,3 +16,7 @@ key.key
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# IDE generated files
+.vscode/
+.idea/

@@ -1,78 +1,81 @@
-
----
-
+markdown
+Copy code
 # Hash Encrypt Project
 
-This Python script, `hash_encrypt.py`, provides functionality to generate a salted and peppered hash using the Argon2 hashing algorithm. It's designed for secure password hashing and validation, making use of robust cryptographic practices.
+This Python project provides robust tools for both hashing passwords using the Argon2 algorithm and symmetric encryption/decryption using Fernet. It's designed for secure data handling, making use of best cryptographic practices.
 
 ## Features
 
-- **Secure Hashing**: Utilizes Argon2, the winner of the Password Hashing Competition, which is recommended for new applications.
-- **Configuration Flexibility**: Allows custom settings for hashing parameters through a configuration file.
-- **Detailed Logging**: Captures detailed operational logs to facilitate debugging and monitoring.
+- **Secure Hashing**: Utilizes Argon2, the winner of the Password Hashing Competition, recommended for new applications that need to hash passwords securely.
+- **Symmetric Encryption and Decryption**: Provides tools for encrypting and decrypting both messages and files using Fernet, which ensures data security and integrity.
+- **Configuration Flexibility**: Allows custom settings for cryptographic parameters through a configuration file.
+- **Detailed Logging**: Captures operational logs to facilitate debugging and monitoring.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-You need Python 3.6 or later to run this script. The project dependencies are listed in the `requirements.txt` file.
+You need Python 3.6 or later to run these scripts. All dependencies are listed in the `requirements.txt` file.
 
 ### Installation
 
-<!-- 1. **Clone the repository (optional):**
-   ```bash
-   git clone https://your-repository-url.com
-   cd hash-encrypt-project
-   ``` -->
-
-2. **Set up a Python virtual environment (recommended):**
+1. **Set up a Python virtual environment (recommended):**
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+Install the required packages:
+bash
+Copy code
+pip install -r requirements.txt
+Configuration
+Modify the config/hash_encrypt.ini configuration file to set the hashing parameters such as memory cost, parallelism, and the number of iterations.
 
-3. **Install the required packages:**
-   ```bash
-   pip install -r requirements.txt
-   ```
+Here’s an example configuration:
 
-### Configuration
-
-Modify the `hash_encrypt.ini` configuration file to set the hashing parameters such as memory cost, parallelism, and the number of iterations. Here’s an example configuration:
-
-```ini
+ini
+Copy code
 [ARGON2]
 memory_cost = 65536
 iterations = 2
 parallelism = 2
-```
+Usage
+Hashing with hash.py
+bash
+Copy code
+python src/hash.py "YourPasswordHere"
+If no argument is provided, the script will prompt you interactively:
 
-### Usage
+bash
+Copy code
+python src/hash.py
+Enter password to hash:
+Encrypting and Decrypting with encrypt.py
+Encrypting Messages
+bash
+Copy code
+python src/encrypt.py --encrypt "YourMessageHere"
+Decrypting Messages
+bash
+Copy code
+python src/encrypt.py --decrypt "EncryptedMessageHere"
+Encrypting Files
+bash
+Copy code
+python src/encrypt.py --encrypt-file "/path/to/your/file"
+Decrypting Files
+bash
+Copy code
+python src/encrypt.py --decrypt-file "/path/to/your/encrypted/file.enc"
+Logging
+Logs are written to logs/encryption.log and logs/hashing.log, detailing operations and errors.
 
-Run the script from the command line, optionally passing an input string:
+Contributing
+Contributions are welcome. Please fork the repository, make changes, and submit a pull request to the main branch. Ensure you write or update tests as necessary.
 
-```bash
-python hash_encrypt.py "YourPasswordHere"
-```
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-For interactive input (if no argument is given), the script will prompt for the input string to hash.
-
-### Logging
-
-Logs are written to `hashing.log` in the current directory, detailing the operations and any errors encountered.
-
-## Contributing
-
-Contributions are welcome. Please fork the repository and submit pull requests to the main branch.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-- This script uses the `argon2-cffi` library, an excellent library for hashing passwords securely.
-
----
+Acknowledgments
+Thanks to the argon2-cffi library for providing a straightforward API for password hashing.

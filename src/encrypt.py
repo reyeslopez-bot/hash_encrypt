@@ -16,33 +16,41 @@ class Encrypt:
 
     @staticmethod
     def load_key():
-        """load_key - Load the encryption key from a file."""
-        return open('key.key', 'rb').read()
+        """Attempt to load the encryption key from a file, generate if not found."""
+        try:
+            with open('key.key', 'rb') as key_file:
+                return key_file.read()
+        except FileNotFoundError:
+            # Generate a new key if not found
+            return Encrypt.generate_key()
 
     @staticmethod
     def encrypt_file(file_path, key):
-        """Encrypt a file using the key."""
-        if not file_path.endswith('.enc'):
-            file_path += '.enc'  # Ensure the file is saved with the .enc extension
-        if not os.path.exists(file_path):
-            return f"Error: The file '{file_path}' does not exist.", False
-        f = Fernet(key)
-        with open(file_path, 'rb') as file:
-            file_data = file.read()
-        encrypted_data = f.encrypt(file_data)
-        encrypted_file_path = file_path
-        with open(encrypted_file_path, 'wb') as file:
-            file.write(encrypted_data)
-        return encrypted_file_path, True
+        """Encrypt the specified file."""
+        if not os.path.isfile(file_path):
+            logging.error(f"File not found: {file_path}")
+            return "Error: File does not exist.", False
+        encrypted_file_path = file_path + '.enc'
+        try:
+            with open(file_path, 'rb') as file:
+                file_data = file.read()
+            f = Fernet(key)
+            encrypted_data = f.encrypt(file_data)
+            with open(encrypted_file_path, 'wb') as file:
+                file.write(encrypted_data)
+            logging.info(f"File encrypted: {encrypted_file_path}")
+            return encrypted_file_path, True
+        except Exception as e:
+            logging.error(f"Encryption failed: {e}")
+            return f"Error encrypting file: {e}", False
 
+    @staticmethod
     def decrypt_file(file_path, key):
-        """Decrypt a file using the key."""
-        print(f"Received file path for decryption: {file_path}")  # Debugging output
-        if not isinstance(file_path, str) or not file_path.endswith('.enc'):
-            return f"Error: The file path must be a string and end with '.enc', given path: {file_path}", False
+        """Decrypt a file using the provided key. Ensure file has '.enc' extension."""
+        if not file_path.endswith('.enc'):
+            file_path += '.enc'
         if not os.path.exists(file_path):
             return f"Error: The file '{file_path}' does not exist.", False
-
         f = Fernet(key)
         try:
             with open(file_path, 'rb') as file:
@@ -51,10 +59,12 @@ class Encrypt:
             decrypted_file_path = file_path[:-4]  # Remove the '.enc' extension
             with open(decrypted_file_path, 'wb') as file:
                 file.write(decrypted_data)
+            logging.info(f"File decrypted successfully: {decrypted_file_path}")
             return decrypted_file_path, True
         except InvalidToken:
+            logging.error("Decryption failed due to an invalid token or corrupted file.")
             return "Error: Decryption failed. Invalid encryption key or file has been corrupted.", False
-
+        
     @staticmethod
     def encrypt_message(key, message):
         """encrypt_message - Encrypt a message using the key."""
@@ -93,6 +103,22 @@ class Encrypt:
         answer = input("Do you want to perform another operation? (y/n): ")
         return answer.lower() == 'y'
 
+    @staticmethod
+    def list_encrypted_files(directory):
+        """List all .enc files in a given directory."""
+        try:
+            files = os.listdir(directory)
+            enc_files = [file for file in files if file.endswith('.enc')]
+            if not enc_files:
+                print("No encrypted files found in the directory.")
+            else:
+                print("Encrypted files:")
+                for file in enc_files:
+                    print(file)
+        except FileNotFoundError:
+            print(f"Directory not found: {directory}")
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
 def main():
     logging.info("Starting encryption tool.")
