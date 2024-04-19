@@ -1,0 +1,16 @@
+# Python generated files
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Configuration files that may contain sensitive information
+*.ini
+
+# Secret keys
+key.key
+
+# OS generated files
+.DS_Store
+Thumbs.db
