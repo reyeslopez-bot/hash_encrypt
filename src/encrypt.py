@@ -26,45 +26,41 @@ class Encrypt:
 
     @staticmethod
     def encrypt_file(file_path, key):
-        """Encrypt the specified file."""
         if not os.path.isfile(file_path):
             logging.error(f"File not found: {file_path}")
             return "Error: File does not exist.", False
         encrypted_file_path = file_path + '.enc'
         try:
             with open(file_path, 'rb') as file:
-                file_data = file.read()
+                data = file.read()
+            logging.debug(f"Read data from {file_path}")
             f = Fernet(key)
-            encrypted_data = f.encrypt(file_data)
+            encrypted_data = f.encrypt(data)
+            logging.debug("Data encrypted")
             with open(encrypted_file_path, 'wb') as file:
                 file.write(encrypted_data)
-            logging.info(f"File encrypted: {encrypted_file_path}")
-            return encrypted_file_path, True
+            logging.info(f"File encrypted successfully: {encrypted_file_path}")
+            return f"File encrypted successfully: {encrypted_file_path}", True
         except Exception as e:
-            logging.error(f"Encryption failed: {e}")
+            logging.error(f"Failed to encrypt file due to: {str(e)}")
             return f"Error encrypting file: {e}", False
 
     @staticmethod
     def decrypt_file(file_path, key):
-        """Decrypt a file using the provided key. Ensure file has '.enc' extension."""
-        if not file_path.endswith('.enc'):
-            file_path += '.enc'
-        if not os.path.exists(file_path):
-            return f"Error: The file '{file_path}' does not exist.", False
-        f = Fernet(key)
+        if not file_path.endswith('.enc') or not os.path.isfile(file_path):
+            return "Error: Encrypted file does not exist.", False
         try:
             with open(file_path, 'rb') as file:
                 encrypted_data = file.read()
-            decrypted_data = f.decrypt(encrypted_data)
-            decrypted_file_path = file_path[:-4]  # Remove the '.enc' extension
+            f = Fernet(key)
+            data = f.decrypt(encrypted_data)
+            decrypted_file_path = file_path[:-4]  # removing '.enc'
             with open(decrypted_file_path, 'wb') as file:
-                file.write(decrypted_data)
-            logging.info(f"File decrypted successfully: {decrypted_file_path}")
-            return decrypted_file_path, True
-        except InvalidToken:
-            logging.error("Decryption failed due to an invalid token or corrupted file.")
-            return "Error: Decryption failed. Invalid encryption key or file has been corrupted.", False
-        
+                file.write(data)
+            return f"File decrypted successfully: {decrypted_file_path}", True
+        except Exception as e:
+            return f"Error decrypting file: {e}", False
+
     @staticmethod
     def encrypt_message(key, message):
         """encrypt_message - Encrypt a message using the key."""
@@ -130,42 +126,46 @@ def main():
         key = Encrypt.generate_key()
         logging.info("New key generated and saved.")
 
-    while True:
-        choice = Encrypt.show_menu_and_get_choice()
-        if choice == '1':
-            message = input("Enter the message to encrypt: ")
-            encrypted_message = Encrypt.encrypt_message(key, message)
-            print(f"Encrypted message: {encrypted_message}")
-        elif choice == '2':
-            encrypted_message = input("Enter the message to decrypt: ")
-            decrypted_message = Encrypt.decrypt_message(key, encrypted_message)
-            if decrypted_message:
-                print(f"Decrypted message: {decrypted_message}")
+    try:
+        while True:
+            choice = Encrypt.show_menu_and_get_choice()
+            if choice == '1':
+                message = input("Enter the message to encrypt: ")
+                encrypted_message = Encrypt.encrypt_message(key, message)
+                print(f"Encrypted message: {encrypted_message}")
+            elif choice == '2':
+                encrypted_message = input("Enter the message to decrypt: ")
+                decrypted_message = Encrypt.decrypt_message(key, encrypted_message)
+                if decrypted_message:
+                    print(f"Decrypted message: {decrypted_message}")
+                else:
+                    print("Error decrypting message.")
+            elif choice == '3':
+                file_path = input("Enter the file path to encrypt: ").strip()
+                encrypted_file_path, success = Encrypt.encrypt_file(file_path, key)
+                if success:
+                    print(f"File encrypted successfully as {encrypted_file_path}")
+                else:
+                    print("Error encrypting file.")
+            elif choice == '4':
+                file_path = input("Enter the file path to decrypt: ").strip()
+                print(f"Attempting to decrypt file: {file_path}")  # Debugging output
+                decrypted_file_path, success = Encrypt.decrypt_file(file_path, key)
+                if success:
+                    print(f"File decrypted successfully as {decrypted_file_path}")
+                else:
+                    print(f"Decryption error: {decrypted_file_path}")
+            elif choice == '5':
+                print("Exiting script.")
+                break
             else:
-                print("Error decrypting message.")
-        elif choice == '3':
-            file_path = input("Enter the file path to encrypt: ").strip()
-            encrypted_file_path, success = Encrypt.encrypt_file(key, file_path)
-            if success:
-                print(f"File encrypted successfully as {encrypted_file_path}")
-            else:
-                print("Error encrypting file.")
-        elif choice == '4':
-            file_path = input("Enter the file path to decrypt: ").strip()
-            print(f"Attempting to decrypt file: {file_path}")  # Debugging output
-            decrypted_file_path, success = Encrypt.decrypt_file(file_path, key)
-            if success:
-                print(f"File decrypted successfully as {decrypted_file_path}")
-            else:
-                print(f"Decryption error: {decrypted_file_path}")
-        elif choice == '5':
-            print("Exiting script.")
-            break
-        else:
-            print("Invalid choice. Please try again.")
+                print("Invalid choice. Please try again.")
 
-        if not Encrypt.ask_if_another_operation():
-            break
+            if not Encrypt.ask_if_another_operation():
+                break
+    except KeyboardInterrupt:
+        print("\nScript interrupted by user. Exiting...")
+        logging.info("Script interrupted by user.")
 
 if __name__ == "__main__":
     main()
