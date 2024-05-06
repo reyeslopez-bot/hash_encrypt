@@ -10,17 +10,34 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      # This action checks out your repository under $GITHUB_WORKSPACE, so your workflow can access it
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: '3.11'
+      # This step sets up a specific Python version for use in the workflow
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+      # This step upgrades pip and installs your project's required dependencies
 
     - name: Run tests
       run: |
-        # Add your command to run tests here
-        echo "Run your tests here"
+        # Example: Run pytest for Python testing
+        pytest
+      # This is where you'd integrate your testing command. This example assumes you're using pytest.
+
+    - name: Collect test coverage
+      run: |
+        pytest --cov=src tests/
+      # This additional step runs pytest with coverage reporting. Make sure to install pytest-cov
+      # You might need to adjust the directories depending on where your tests and source code are located
+    - name: Build Docker Image
+      run: docker build -t my-application .
+    
+    - name: Run Docker Container
+      run: docker run my-application pytest
+    
