@@ -8,7 +8,7 @@ __pycache__/
 
 # Configuration files that may contain sensitive information
 *.ini
-/config/hash_encrypt.ini (if it contains sensitive information)
+/config/hash_encrypt.ini
 
 # Secret keys
 key.key
@@ -20,3 +20,70 @@ Thumbs.db
 # IDE generated files
 .vscode/
 .idea/
+
+# Virtual environment
+venv/
+env/
+*.venv/
+*.env/
+
+# Node modules (if using Node.js or similar in your project)
+node_modules/
+
+# Build artifacts
+/build/
+/dist/
+*.egg-info/
+*.egg
+
+# Compiled source files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packaging
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.tar
+
+# Testing
+*.coverage
+.coverage.*
+/.pytest_cache/
+/htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Environment variables
+.env
+.env.local
+
+# Dependency directories (common in various languages)
+/node_modules/
+/jspm_packages/
+/bower_components/
+
+# Typing
+*.types
+
+# Django specific (if using Django)
+/db.sqlite3
+/static/
+
+# Flask specific (if using Flask)
+instance/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
