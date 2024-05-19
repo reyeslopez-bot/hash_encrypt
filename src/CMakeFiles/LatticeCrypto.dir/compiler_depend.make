@@ -688,12 +688,12 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cwchar \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cwctype \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/errno.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/exception \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/functional \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/future \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/initializer_list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iomanip \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ios \
@@ -712,6 +712,7 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/numeric \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/optional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ostream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/queue \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/random \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ratio \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/sstream \
@@ -870,386 +871,408 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Cholesky \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Core \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Dense \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Eigenvalues \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Geometry \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Householder \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Jacobi \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/LU \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/QR \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/SVD \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Cholesky/LDLT.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Cholesky/LLT.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/BlockMethods.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Array.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ArrayBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Assign.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/BandMatrix.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Block.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/BooleanRedux.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CommaInitializer.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CoreIterators.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DenseBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DenseStorage.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Diagonal.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Dot.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/EigenBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Fuzzy.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/GeneralProduct.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/IO.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/IndexedView.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Inverse.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Map.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/MapBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/MathFunctions.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Matrix.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/MatrixBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/NestByValue.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/NoAlias.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/NumTraits.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Product.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Random.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Redux.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Ref.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Replicate.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Reshaped.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ReturnByValue.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Reverse.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Select.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Solve.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/SolveTriangular.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/SolverBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/StableNorm.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/StlIterators.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Stride.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Swap.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Transpose.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Transpositions.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/VectorBlock.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Visitor.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/Constants.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/MKL_support.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/Macros.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/Memory.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/Meta.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/XprHelper.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/AngleAxis.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/EulerAngles.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Homogeneous.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Hyperplane.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/OrthoMethods.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Quaternion.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Rotation2D.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/RotationBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Scaling.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Transform.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Translation.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Umeyama.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Householder/BlockHouseholder.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Householder/Householder.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Householder/HouseholderSequence.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Jacobi/Jacobi.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/Determinant.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/FullPivLU.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/InverseImpl.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/PartialPivLU.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/arch/InverseSize4.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/QR/HouseholderQR.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/SVD/BDCSVD.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/SVD/JacobiSVD.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/SVD/SVDBase.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/misc/Image.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/misc/Kernel.h \
-  /opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/misc/RealSvd2x2.h
+  /opt/homebrew/include/eigen3/Eigen/Cholesky \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/Dense \
+  /opt/homebrew/include/eigen3/Eigen/Eigenvalues \
+  /opt/homebrew/include/eigen3/Eigen/Geometry \
+  /opt/homebrew/include/eigen3/Eigen/Householder \
+  /opt/homebrew/include/eigen3/Eigen/Jacobi \
+  /opt/homebrew/include/eigen3/Eigen/LU \
+  /opt/homebrew/include/eigen3/Eigen/QR \
+  /opt/homebrew/include/eigen3/Eigen/SVD \
+  /opt/homebrew/include/eigen3/Eigen/src/Cholesky/LDLT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Cholesky/LLT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/AngleAxis.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/EulerAngles.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/Homogeneous.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/Hyperplane.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/OrthoMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/Quaternion.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/Rotation2D.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/RotationBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/Scaling.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/Transform.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/Translation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/Umeyama.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Householder/BlockHouseholder.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Householder/Householder.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Householder/HouseholderSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Jacobi/Jacobi.h \
+  /opt/homebrew/include/eigen3/Eigen/src/LU/Determinant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/LU/FullPivLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/LU/InverseImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/LU/PartialPivLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/LU/arch/InverseSize4.h \
+  /opt/homebrew/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h \
+  /opt/homebrew/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
+  /opt/homebrew/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h \
+  /opt/homebrew/include/eigen3/Eigen/src/QR/HouseholderQR.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SVD/BDCSVD.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SVD/JacobiSVD.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SVD/SVDBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/misc/Image.h \
+  /opt/homebrew/include/eigen3/Eigen/src/misc/Kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/misc/RealSvd2x2.h
 
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h:
+/opt/homebrew/include/eigen3/Eigen/src/misc/RealSvd2x2.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/SVD/SVDBase.h:
+/opt/homebrew/include/eigen3/Eigen/src/misc/Kernel.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/QR/HouseholderQR.h:
+/opt/homebrew/include/eigen3/Eigen/src/misc/Image.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
+/opt/homebrew/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h:
+/opt/homebrew/include/eigen3/Eigen/src/SVD/JacobiSVD.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/arch/InverseSize4.h:
+/opt/homebrew/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Umeyama.h:
+/opt/homebrew/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Translation.h:
+/opt/homebrew/include/eigen3/Eigen/src/LU/PartialPivLU.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Scaling.h:
+/opt/homebrew/include/eigen3/Eigen/src/LU/Determinant.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/RotationBase.h:
+/opt/homebrew/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Quaternion.h:
+/opt/homebrew/include/eigen3/Eigen/src/Householder/Householder.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/misc/Kernel.h:
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/Transform.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/EulerAngles.h:
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/Scaling.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/OrthoMethods.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/Hyperplane.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
+/opt/homebrew/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h:
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/EulerAngles.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h:
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h:
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h:
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/AngleAxis.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/Macros.h:
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h:
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/StlFunctors.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Transpositions.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Transpose.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Stride.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/SolveTriangular.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Solve.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Reverse.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ReturnByValue.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Replicate.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Random.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/PartialPivLU.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/PlainObjectBase.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/PermutationMatrix.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/NoAlias.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/NestByValue.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Matrix.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/MapBase.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Swap.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Map.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Select.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Inverse.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/IndexedView.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/IO.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/GenericPacketMath.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/GeneralProduct.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Dot.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseUnaryView.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Map.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CoreIterators.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CoreEvaluators.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CommaInitializer.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/BooleanRedux.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Block.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/BandMatrix.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ArrayBase.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Block.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/SVD:
+/opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/QR:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Geometry:
+/opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Eigenvalues:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Array.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Redux.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Cholesky:
+/opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Cholesky/LLT.h:
+
+/opt/homebrew/include/eigen3/Eigen/SVD:
+
+/opt/homebrew/include/eigen3/Eigen/LU:
+
+/opt/homebrew/include/eigen3/Eigen/Jacobi:
+
+/opt/homebrew/include/eigen3/Eigen/Householder:
+
+/opt/homebrew/include/eigen3/Eigen/Geometry:
+
+/opt/homebrew/include/eigen3/Eigen/Dense:
+
+/opt/homebrew/include/eigen3/Eigen/Cholesky:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stddef.h:
 
@@ -1258,6 +1281,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/limits.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/arm_neon.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/arm_fp16.h:
 
@@ -1277,15 +1302,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/wchar.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/MathFunctions.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/wait.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/types.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/syslimits.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/NumTraits.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/errno.h:
 
@@ -1293,21 +1314,17 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_wint_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_wchar_t.h:
+/opt/homebrew/include/eigen3/Eigen/src/LU/FullPivLU.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Core:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_wchar_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_va_list.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_useconds_t.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Diagonal.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_uid_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_short.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int8_t.h:
 
@@ -1316,6 +1333,10 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int16_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_char.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_timeval.h:
 
@@ -1335,8 +1356,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_nlink_t.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/SVD/JacobiSVD.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_seek_set.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_mode_t.h:
@@ -1347,11 +1366,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_key_t.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Householder/Householder.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_intptr_t.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/ReshapedMethods.h:
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int8_t.h:
 
@@ -1365,6 +1384,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_in_addr_t.h:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_id_t.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config_site:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_fd_zero.h:
@@ -1377,11 +1398,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_blkcnt_t.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/SolverBase.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_int32_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_symbol_aliasing.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_binary_search.h:
 
@@ -1391,11 +1412,9 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_posix_availability.h:
 
@@ -1425,8 +1444,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/machine/_types.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Householder:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/machine/_mcontext.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/types.h:
@@ -1435,9 +1452,13 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/mach/arm/_structs.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/libkern/arm/OSByteOrder.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/libkern/_OSByteOrder.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_swap_ranges.h:
 
@@ -1495,8 +1516,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ios:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/future:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/signal.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdlib:
@@ -1507,15 +1526,13 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/unordered_map:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdio:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/condition_variable:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_off_t.h:
 
@@ -1531,7 +1548,7 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/chrono:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/misc/Image.h:
+/opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/limits.h:
 
@@ -1546,6 +1563,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/array:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__verbose_abort:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Random.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/set_difference.h:
 
@@ -1567,13 +1586,9 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__utility/exception_guard.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_size_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__utility/cmp.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__utility/as_const.h:
 
@@ -1585,6 +1600,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/utility:
 
+/opt/homebrew/include/eigen3/Eigen/QR:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/same_as.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_cvref.h:
@@ -1594,6 +1611,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_cv.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__fwd/subrange.h:
 
@@ -1625,8 +1644,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_dev_t.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Product.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/weak_order.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_valid_expansion.h:
@@ -1636,8 +1653,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_unsigned_integer.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_unbounded_array.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/IntegralConstant.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_move_assignable.h:
 
@@ -1653,11 +1668,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_reference.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/type_traits:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_primary_template.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/Constants.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/file_status.h:
 
@@ -1675,8 +1690,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iosfwd:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_copyable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/not_fn.h:
@@ -1692,8 +1705,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_assignable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_destructible.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/Determinant.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__utility/in_place.h:
 
@@ -1725,15 +1736,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_function.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Reshaped.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_final.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_empty.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_copy_assignable.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_convertible.h:
 
@@ -1755,15 +1762,13 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_array.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_arithmetic.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_always_bitcastable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ctime:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_allocator.h:
 
@@ -1771,17 +1776,23 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_aggregate.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/integral_constant.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/in_found_result.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/has_virtual_destructor.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/algorithm:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_move_assignable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/enable_if.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/Translation.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/type_list.h:
 
@@ -1809,11 +1820,7 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/add_volatile.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/add_pointer.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/add_lvalue_reference.h:
 
@@ -1835,15 +1842,13 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__threading_support:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ranges/view_interface.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ranges/subrange.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ranges/enable_view.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/LU:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_count_if.h:
 
@@ -1852,6 +1857,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ranges/empty.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_reference_wrapper.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ranges/dangling.h:
 
@@ -1879,6 +1886,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_swappable.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Product.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_timespec.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/ranlux.h:
@@ -1902,6 +1911,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_enum.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/log2.h:
 
@@ -1933,8 +1944,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/stdio.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Hyperplane.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/alignment_of.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/in_out_result.h:
@@ -1963,6 +1972,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/limits:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/deque:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/poisson_distribution.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory_resource/memory_resource.h:
@@ -1976,8 +1987,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/voidify.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/BlockMethods.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/mach/machine/_structs.h:
 
@@ -1997,15 +2006,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/raw_storage_iterator.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Assign.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/ranges_construct_at.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_const.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/pointer_traits.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/FullPivLU.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/stable_sort.h:
 
@@ -2017,6 +2022,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/string:
 
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/Homogeneous.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/allocator_destructor.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h:
@@ -2026,8 +2033,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/allocator_arg_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/string.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/XprHelper.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_partial_sort.h:
 
@@ -2041,7 +2046,13 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/allocate_at_least.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_all_extents.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/LU/arch/InverseSize4.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/Quaternion.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/exponential_distribution.h:
 
@@ -2053,9 +2064,13 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_extent.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/sortable.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SVD/SVDBase.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/size.h:
 
@@ -2069,6 +2084,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/projected.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/is_sorted_until.h:
@@ -2077,7 +2094,7 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/copy_if.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Homogeneous.h:
+/opt/homebrew/include/eigen3/Eigen/Core:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/common_comparison_category.h:
 
@@ -2086,8 +2103,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/ostream_iterator.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/next.h:
 
@@ -2101,11 +2116,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/move_sentinel.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/Umeyama.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/disjunction.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/discard_block_engine.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DiagonalProduct.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/move_iterator.h:
 
@@ -2117,8 +2132,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/insert_iterator.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/EigenBase.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/add_cv.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
@@ -2129,9 +2142,9 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/indirectly_comparable.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/MKL_support.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__chrono/month_weekday.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
 
@@ -2145,17 +2158,15 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/default_sentinel.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/counted_iterator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/replace.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Cholesky/LLT.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_find_if_not.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/QR/HouseholderQR.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_xlocale.h:
 
@@ -2164,6 +2175,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_ucontext.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/ostreambuf_iterator.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/bit_floor.h:
 
@@ -2176,8 +2189,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__fwd/pair.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__fwd/memory_resource.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Rotation2D.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/copy_n.h:
 
@@ -2197,8 +2208,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__fwd/get.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Array.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/seed_seq.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/default_random_engine.h:
@@ -2213,6 +2222,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/unary_negate.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_fd_isset.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/ranges_operations.h:
@@ -2224,8 +2235,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/unary_function.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/stdint.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iterator:
 
@@ -2239,11 +2248,15 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__utility/exchange.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_u_int64_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/iterator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/operations.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_intmax_t.h:
 
@@ -2257,8 +2270,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ranges/access.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/Transform.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/ranges_uninitialized_algorithms.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_set_difference.h:
@@ -2271,15 +2282,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__utility/convert_to_integral.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/AngleAxis.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/lognormal_distribution.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/bind.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/binary_negate.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_id_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/linear_congruential_engine.h:
 
@@ -2295,19 +2302,21 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/functional:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/iter_swap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/perms.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_lexicographical_compare.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/operations.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/LU/InverseImpl.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Select.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/errno.h:
 
@@ -2325,37 +2334,27 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/temp_value.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/directory_entry.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/totally_ordered.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/copy_options.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/uses_allocator.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_abstract.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/function.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_max.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/bind_front.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__errc:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Geometry/OrthoMethods.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__debug:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/unwrap_ref.h:
 
@@ -2376,6 +2375,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/movable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/endian.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/equality_comparable.h:
 
@@ -2409,8 +2410,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/is_seed_sequence.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/common_with.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_fd_def.h:
@@ -2439,6 +2438,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ratio:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/has_unique_object_representation.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/conditional.h:
@@ -2449,11 +2450,7 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdint:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Jacobi:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/limits.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DenseBase.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_member_object_pointer.h:
 
@@ -2485,6 +2482,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config:
 
+/opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/compare_three_way_result.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/relation.h:
@@ -2495,21 +2494,29 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_default_constructible.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__chrono/year_month_weekday.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_copy.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/queue:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/shuffle.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SVD/BDCSVD.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/iter_swap.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Fuzzy.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_bounded_array.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/is_transparent.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/_types.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__chrono/year.h:
 
@@ -2519,9 +2526,9 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__chrono/statically_widen.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/compare_partial_order_fallback.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Ref.h:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/compare_partial_order_fallback.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/different_from.h:
 
@@ -2542,8 +2549,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/popcount.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/has_single_bit.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_uintptr_t.h:
 
@@ -2566,8 +2571,6 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_destructible.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/file_type.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/SVD/BDCSVD.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_stable_sort.h:
 
@@ -2601,6 +2604,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/swap_ranges.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/Availability.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/can_extract_key.h:
@@ -2617,15 +2622,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit_reference:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/version:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/StlIterators.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/copy.h:
 
@@ -2642,6 +2643,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/search_n.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_push_heap.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_shuffle.h:
 
@@ -2683,19 +2686,19 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/rotate_copy.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/Dense:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_destructible.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/Memory.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/rotate.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Householder/BlockHouseholder.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_unsigned.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/reverse_copy.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/compare_three_way.h:
 
@@ -2704,6 +2707,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/sstream:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_copy_constructible.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/fill_n.h:
 
@@ -2719,6 +2724,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/includes.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_transform.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__chrono/monthday.h:
@@ -2726,6 +2733,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_min_element.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/common_iterator.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/replace_copy.h:
 
@@ -2737,11 +2746,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_trivial.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/RotationBase.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/rank.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__chrono/convert_to_tm.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/__stddef_max_align_t.h:
 
@@ -2759,19 +2768,13 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_partial_sort_copy.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/add_const.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_pop_heap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_is_partitioned.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_find_first_of.h:
 
@@ -2785,9 +2788,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/void_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_next_permutation.h:
 
@@ -2813,6 +2818,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_minmax_element.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/is_partitioned.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/concepts.h:
@@ -2825,13 +2832,11 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_gid_t.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Geometry/Rotation2D.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/fstream:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/generate_canonical.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_copy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/optional:
 
@@ -2845,6 +2850,8 @@ CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: lattice_crypto.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_lower_bound.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/IO.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_make_heap.h:
 
 lattice_crypto.cpp:
@@ -2857,17 +2864,15 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Householder/BlockHouseholder.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/default_searcher.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_is_permutation.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_referenceable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_is_heap_until.h:
 
@@ -2888,6 +2893,8 @@ lattice_crypto.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_equal.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__tuple_dir/tuple_element.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/LU/InverseImpl.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ranges/enable_borrowed_range.h:
 
@@ -2933,6 +2940,8 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/push_heap.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/nth_element.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/make_heap.h:
@@ -2942,8 +2951,6 @@ lattice_crypto.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint16_t.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/StableNorm.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_wctype_t.h:
 
@@ -2959,9 +2966,9 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/swappable.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/min_max_result.h:
+/opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Cholesky/LDLT.h:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/min_max_result.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdexcept:
 
@@ -2977,11 +2984,7 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__numeric/inner_product.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/iter_move.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/VectorBlock.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/locale.h:
 
@@ -3003,13 +3006,13 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_reverse.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/iterator_operations.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/copy_cv.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_copy_if.h:
+
+/opt/homebrew/include/eigen3/Eigen/Eigenvalues:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/negation.h:
 
@@ -3017,11 +3020,11 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/bind_back.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Cholesky/LDLT.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/equal_range.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_constructible.h:
 
@@ -3033,6 +3036,8 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/in_in_result.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/min.h:
@@ -3043,11 +3048,13 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__assert:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/MatrixBase.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_nl_item.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/is_heap_until.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h:
 
@@ -3067,8 +3074,6 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/arm/_mcontext.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/Visitor.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/decay.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/lexicographical_compare.h:
@@ -3083,11 +3088,13 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/nl_types.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/constructible.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/util/Meta.h:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/constructible.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/find_if.h:
 
@@ -3109,6 +3116,8 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/initializer_list:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/find_first_of.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__fwd/string.h:
@@ -3118,8 +3127,6 @@ lattice_crypto.cpp:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_constructible.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/misc/RealSvd2x2.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/find_end.h:
 
@@ -3153,15 +3160,11 @@ lattice_crypto.cpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_set_union.h:
 
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/invocable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/_types/_wctrans_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/remove_copy.h:
-
-/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3/Eigen/src/Core/DenseStorage.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/AvailabilityInternalLegacy.h:
 
