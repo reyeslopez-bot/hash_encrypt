@@ -86,6 +86,7 @@ public:
     Eigen::VectorXi generate_secret_key() {
         Eigen::VectorXi secret_key = generate_random_vector(poly_degree);
         Logger::log("Secret key generated successfully.", Logger::Info);
+        Logger::log("Secret key: " + vector_to_string(secret_key), Logger::Debug);
         return secret_key;
     }
 
@@ -106,30 +107,32 @@ public:
         return vec;
     }
 
-Eigen::VectorXi polynomial_multiply(const Eigen::VectorXi& a, const Eigen::VectorXi& b) {
-    Eigen::FFT<double> fft;
-    std::vector<std::complex<double>> a_complex(a.data(), a.data() + a.size());
-    std::vector<std::complex<double>> b_complex(b.data(), b.data() + b.size());
+    Eigen::VectorXi polynomial_multiply(const Eigen::VectorXi& a, const Eigen::VectorXi& b) {
+        Eigen::FFT<double> fft;
+        std::vector<std::complex<double>> a_complex(a.data(), a.data() + a.size());
+        std::vector<std::complex<double>> b_complex(b.data(), b.data() + b.size());
 
-    std::vector<std::complex<double>> result_complex;
-    fft.fwd(a_complex, a_complex);
-    fft.fwd(b_complex, b_complex);
+        std::vector<std::complex<double>> result_complex;
+        fft.fwd(a_complex, a_complex);
+        fft.fwd(b_complex, b_complex);
 
-    result_complex.resize(a_complex.size());
-    for (size_t i = 0; i < a_complex.size(); ++i) {
-        result_complex[i] = a_complex[i] * b_complex[i];
+        result_complex.resize(a_complex.size());
+        for (size_t i = 0; i < a_complex.size(); ++i) {
+            result_complex[i] = a_complex[i] * b_complex[i];
+        }
+
+        fft.inv(result_complex, result_complex);
+
+        Eigen::VectorXi result_int(result_complex.size());
+        for (size_t i = 0; i < result_complex.size(); ++i) {
+            result_int[i] = std::lround(result_complex[i].real()); // Use lround for better integer rounding
+            result_int[i] = ((result_int[i] % q) + q) % q;         // Apply modulus here
+        }
+
+        result_int.conservativeResize(poly_degree);
+        return result_int;
     }
 
-    fft.inv(result_complex, result_complex);
-
-    Eigen::VectorXi result(result_complex.size());
-    for (size_t i = 0; i < result_complex.size(); ++i) {
-        result[i] = std::round(result_complex[i].real());
-    }
-
-    result.conservativeResize(poly_degree);
-    return result;
-}
 private:
     int poly_degree;
     int q;
@@ -182,30 +185,52 @@ public:
 
     std::pair<Eigen::VectorXi, Eigen::VectorXi> encrypt(const std::string& plaintext) {
         try {
+            std::cout << "poly_degree: " << poly_degree << std::endl;
             Eigen::VectorXi m = Eigen::VectorXi::Zero(poly_degree);
+            std::cout << "Vector m initialized with size: " << m.size() << std::endl;
             for (size_t i = 0; i < plaintext.size() && i < poly_degree; ++i) {
                 m[i] = static_cast<int>(plaintext[i]);
             }
             pad_vector(m, plaintext.size());
             Logger::log("Plaintext vector: " + vector_to_string(m), Logger::Debug);
 
+            // Log the random vectors e1, e2, and u
             Eigen::VectorXi e1 = key_gen->generate_random_vector(poly_degree);
+            Logger::log("Random vector (e1): " + vector_to_string(e1), Logger::Debug);
+
             Eigen::VectorXi e2 = key_gen->generate_random_vector(poly_degree);
+            Logger::log("Random vector (e2): " + vector_to_string(e2), Logger::Debug);
+
             Eigen::VectorXi u = key_gen->generate_random_vector(poly_degree);
+            Logger::log("Random vector (u): " + vector_to_string(u), Logger::Debug);
 
             Eigen::VectorXi c1 = key_gen->polynomial_multiply(public_key.first, u) + e1;
             Eigen::VectorXi c2 = key_gen->polynomial_multiply(public_key.second, u) + e2 + m;
 
+            // Modulate the ciphertext components
             c1 = modulate_vector(c1, q);
             c2 = modulate_vector(c2, q);
+            
+            // Log the public keys
+            Logger::log("Public key (a): " + vector_to_string(public_key.first), Logger::Debug);
+            Logger::log("Public key (b): " + vector_to_string(public_key.second), Logger::Debug);
 
+            // Log the ciphertext components c1 and c2
+            Logger::log("Ciphertext c1: " + vector_to_string(c1), Logger::Debug);
+            Logger::log("Ciphertext c2: " + vector_to_string(c2), Logger::Debug);
+
+            // Log the ciphertext components c1 and c2
+            Logger::log("Ciphertext c1: " + vector_to_string(c1), Logger::Debug);
+            Logger::log("Ciphertext c2: " + vector_to_string(c2), Logger::Debug);
             Logger::log("Encryption completed successfully.", Logger::Info);
+
             return {c1, c2};
         } catch (const std::exception& e) {
             Logger::log("Encryption failed: " + std::string(e.what()), Logger::Error);
             throw;
         }
     }
+
 
     std::string decrypt(const std::pair<Eigen::VectorXi, Eigen::VectorXi>& ciphertext) {
         try {
@@ -216,24 +241,31 @@ public:
             Logger::log("Ciphertext c1: " + vector_to_string(c1), Logger::Debug);
             Logger::log("Ciphertext c2: " + vector_to_string(c2), Logger::Debug);
 
+            // Decrypt the message
             Eigen::VectorXi m = key_gen->polynomial_multiply(c1, secret_key);
+
+            Logger::log("After Multiplication m: " + vector_to_string(m), Logger::Debug);
+
             m = c2 - m;
-            Logger::log("Subtracted m: " + vector_to_string(m), Logger::Debug);
-
+            Logger::log("Before Modulation m: " + vector_to_string(m), Logger::Debug);
             m = modulate_vector(m, q);
-            Logger::log("Modulated m: " + vector_to_string(m), Logger::Debug);
+            Logger::log("After Modulation m: " + vector_to_string(m), Logger::Debug);
 
+            // Convert the decrypted vector to a string
             std::string plaintext;
             for (int i = 0; i < poly_degree; ++i) {
                 plaintext += normalize_char(m[i]);
             }
+
+            // Remove padding
+            Logger::log("Decrypted plaintext (before padding removal): " + plaintext, Logger::Debug);
             plaintext = remove_padding(plaintext);
 
             Logger::log("Decrypted plaintext: " + plaintext, Logger::Info);
             return plaintext;
         } catch (const std::exception& e) {
             Logger::log("Decryption failed: " + std::string(e.what()), Logger::Error);
-            throw;
+            throw; // Rethrow the exception after logging
         }
     }
 };

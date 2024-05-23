@@ -1,4 +1,5 @@
 CMakeFiles/LatticeCrypto.dir/lattice_crypto.cpp.o: \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/share/asan_ignorelist.txt \
   /Users/apikorus/hash_encrypt/src/lattice_crypto.cpp \
   /opt/homebrew/include/eigen3/Eigen/Dense \
   /opt/homebrew/include/eigen3/Eigen/Core \
