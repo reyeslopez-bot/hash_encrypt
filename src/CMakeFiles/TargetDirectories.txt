@@ -1,3 +1,0 @@
-/Users/apikorus/hash_encrypt/src/CMakeFiles/LatticeCrypto.dir
-/Users/apikorus/hash_encrypt/src/CMakeFiles/edit_cache.dir
-/Users/apikorus/hash_encrypt/src/CMakeFiles/rebuild_cache.dir
