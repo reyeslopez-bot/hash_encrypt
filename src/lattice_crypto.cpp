@@ -1,3 +1,6 @@
+#ifndef LATTICE_CRYPTO_H
+#define LATTICE_CRYPTO_H
+
 #include <Eigen/Dense>
 #include <iostream>
 #include <fstream>
@@ -18,10 +21,65 @@
 #include <unsupported/Eigen/FFT>
 #include <boost/lockfree/queue.hpp>
 
-// Function to convert an Eigen vector to a string
-std::string vector_to_string(const Eigen::VectorXi& vec) {
+namespace ntt_utils {
+
+    // Function to perform the forward or inverse NTT
+    void ntt(std::vector<std::complex<double>>& vec, bool inverse, int q) {
+        int n = vec.size();
+        int log_n = std::log2(n);
+        std::vector<std::complex<double>> roots(n);
+
+        // Compute the primitive root of unity
+        std::complex<double> root_of_unity = std::polar(1.0, 2 * M_PI / n);
+        if (inverse) {
+            root_of_unity = std::polar(1.0, -2 * M_PI / n);
+        }
+
+        // Initialize the roots
+        roots[0] = 1;
+        for (int i = 1; i < n; ++i) {
+            roots[i] = roots[i - 1] * root_of_unity;
+        }
+
+        // Bit-reversed permutation
+        for (int i = 0, j = 0; i < n; ++i) {
+            if (i < j) {
+                std::swap(vec[i], vec[j]);
+            }
+            int bit = n >> 1;
+            while (j & bit) {
+                j ^= bit;
+                bit >>= 1;
+            }
+            j ^= bit;
+        }
+
+        // NTT computation
+        for (int len = 2; len <= n; len <<= 1) {
+            int half_len = len >> 1;
+            int root_step = n / len;
+            for (int i = 0; i < n; i += len) {
+                for (int j = 0; j < half_len; ++j) {
+                    std::complex<double> u = vec[i + j];
+                    std::complex<double> v = vec[i + j + half_len] * roots[j * root_step];
+                    vec[i + j] = u + v;
+                    vec[i + j + half_len] = u - v;
+                }
+            }
+        }
+
+        // Divide by n if inverse
+        if (inverse) {
+            for (int i = 0; i < n; ++i) {
+                vec[i] /= n;
+            }
+        }
+    }
+}
+// Function to convert an Eigen matrix to a string
+std::string matrix_to_string(const Eigen::MatrixXi& mat) {
     std::stringstream ss;
-    ss << vec.transpose();
+    ss << mat;
     return ss.str();
 }
 
@@ -91,13 +149,14 @@ namespace lattice_crypto {
             }
         }
     };
+
     // Initialize static members
     std::queue<std::pair<std::string, lattice_crypto::Logger::Level>> lattice_crypto::Logger::logQueue;
     std::mutex lattice_crypto::Logger::mtx;
     std::condition_variable lattice_crypto::Logger::cv;
     std::atomic<bool> lattice_crypto::Logger::finished = false;
-    std::ofstream lattice_crypto::Logger::logFile;  // Definition
-    // KeyGenerator class for generating Ring-LWE keys
+    std::ofstream lattice_crypto::Logger::logFile;
+
     class KeyGenerator {
     private:
         int poly_degree;
@@ -117,14 +176,15 @@ namespace lattice_crypto {
         Eigen::MatrixXi generate_secret_key() {
             Eigen::MatrixXi secret_key = generate_random_matrix(poly_degree, poly_degree);
             lattice_crypto::Logger::log("Secret key generated successfully.", lattice_crypto::Logger::Info, __FILE__, __LINE__, __func__);
-            lattice_crypto::Logger::log("Secret key: " + vector_to_string(secret_key), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
+            lattice_crypto::Logger::log("Secret key: " + matrix_to_string(secret_key), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
             return secret_key;
         }
 
         std::pair<Eigen::MatrixXi, Eigen::MatrixXi> generate_public_key(const Eigen::MatrixXi& secret_key) {
             Eigen::MatrixXi a = generate_random_matrix(poly_degree, poly_degree);
             Eigen::MatrixXi e = generate_random_matrix(poly_degree, poly_degree);
-            Eigen::MatrixXi b = polynomial_multiply(a, secret_key) + e;
+            Eigen::MatrixXi b = polynomial_multiply(a, secret_key, q) + e;
+
             b = b.unaryExpr([this](int x) { return ((x % q) + q) % q; });
             lattice_crypto::Logger::log("Public key generated successfully.", lattice_crypto::Logger::Info, __FILE__, __LINE__, __func__);
             return {a, b};
@@ -140,13 +200,19 @@ namespace lattice_crypto {
             return mat;
         }
 
-    Eigen::MatrixXi polynomial_multiply(const Eigen::MatrixXi& a, const Eigen::MatrixXi& b) {
-        Eigen::FFT<double> fft;
-        std::vector<std::complex<double>> a_complex(a.size()), b_complex(b.size());
-        Eigen::MatrixXi result_int(a.rows(), b.cols());
+        Eigen::MatrixXi polynomial_multiply(const Eigen::MatrixXi& a, const Eigen::MatrixXi& b, int q) {
+            if (a.cols() != b.rows()) {
+                throw std::runtime_error("Matrix dimensions are not compatible for multiplication.");
+            }
 
-        try {
-            // Initialize complex vectors from integer matrices
+            // Determine the next power of 2 that can fit the result polynomial
+            int resultSize = 1;
+            while (resultSize < a.cols() + b.rows() - 1) {
+                resultSize *= 2;
+            }
+
+            // Initialize complex vectors with padding for NTT
+            std::vector<std::complex<double>> a_complex(resultSize, 0), b_complex(resultSize, 0);
             for (int i = 0; i < a.rows(); ++i) {
                 for (int j = 0; j < a.cols(); ++j) {
                     a_complex[i * a.cols() + j] = std::complex<double>(a(i, j), 0);
@@ -154,127 +220,107 @@ namespace lattice_crypto {
                 }
             }
 
-            fft.fwd(a_complex, a_complex);
-            fft.fwd(b_complex, b_complex);
+            // Number Theoretic Transform
+            ntt_utils::ntt(a_complex, false, q);
+            ntt_utils::ntt(b_complex, false, q);
 
-            std::vector<std::complex<double>> result_complex(a_complex.size());
-            for (size_t i = 0; i < a_complex.size(); ++i) {
+            // Pointwise multiplication in the NTT domain
+            std::vector<std::complex<double>> result_complex(resultSize);
+            for (int i = 0; i < resultSize; ++i) {
                 result_complex[i] = a_complex[i] * b_complex[i];
             }
 
-            fft.inv(result_complex, result_complex);
-            for (size_t i = 0; i < result_complex.size(); ++i) {
-                int row = i / a.cols();
-                int col = i % a.cols();
-                result_int(row, col) = modulo(std::lround(result_complex[i].real()), q);
-            }
-        } catch (const std::overflow_error& e) {
-            lattice_crypto::Logger::log("Overflow error in polynomial multiply: " + std::string(e.what()), lattice_crypto::Logger::Error, __FILE__, __LINE__, __func__);
-            throw;
-        } catch (const std::runtime_error& e) {
-            lattice_crypto::Logger::log("Runtime error in polynomial multiply: " + std::string(e.what()), lattice_crypto::Logger::Error, __FILE__, __LINE__, __func__);
-            throw;
-        } catch (const std::exception& e) {
-            lattice_crypto::Logger::log("Exception in polynomial_multiply: " + std::string(e.what()), lattice_crypto::Logger::Error, __FILE__, __LINE__, __func__);
-            throw;
-        }
+            // Inverse Number Theoretic Transform
+            ntt_utils::ntt(result_complex, true, q);
 
+            // Perform the modulus operation with integers
+            Eigen::MatrixXi result_int;
+            for (int i = 0; i < result_int.rows(); ++i) {
+                for (int j = 0; j < result_int.cols(); ++j) {
+                    result_int(i, j) = static_cast<int>(std::round(result_complex[i * b_complex.size() + j].real()) / resultSize) % q;
+            }
+        }
         return result_int;
     }
-        };
+
+};
 
     class RingLWECrypto {
     public:
-        RingLWECrypto(int poly_degree = 512, int modulus = 4096) : poly_degree(poly_degree), q(modulus),
-            key_gen(std::make_unique<KeyGenerator>(poly_degree, modulus)), gen(std::random_device{}()) {
-            Logger::log("Initializing RingLWECrypto...", Logger::Debug, __FILE__, __LINE__, __func__);
-            secret_key = key_gen->generate_secret_key();
-            public_key = key_gen->generate_public_key(secret_key);
-            assert(public_key.second.rows() == poly_degree && public_key.second.cols() == poly_degree);  // Now correctly placed in constructor
-        }
+        RingLWECrypto(int poly_degree = 512, int modulus = 4096);
         std::pair<Eigen::MatrixXi, Eigen::MatrixXi> encrypt(const std::string& plaintext);
         std::string decrypt(const std::pair<Eigen::MatrixXi, Eigen::MatrixXi>& ciphertext);
+        ~RingLWECrypto();
 
     private:
         int poly_degree;
         int q;
-        Eigen::MatrixXi secret_key;
-        std::pair<Eigen::MatrixXi, Eigen::MatrixXi> public_key;
         std::unique_ptr<KeyGenerator> key_gen;
         std::mt19937 gen;
-    
+        Eigen::MatrixXi secret_key;
+        std::pair<Eigen::MatrixXi, Eigen::MatrixXi> public_key;
+        char normalize_char(int val);
+        void pad_matrix(Eigen::MatrixXi& mat, int rows, int cols, int pad_val = 0);
+        std::string remove_padding(const std::string& str);
+        Eigen::MatrixXi modulate_matrix(const Eigen::MatrixXi& mat, int mod);
+    }
 
-        char normalize_char(int val) {
-            val = ((val % 256) + 256) % 256;
-            if (val < 32 || val > 126) {
-                return '?'; // Non-printable characters are replaced with '?'
-            }
-            return static_cast<char>(val);
+    #endif // LATTICE_CRYPTO_H
+    RingLWECrypto::RingLWECrypto(int poly_degree, int modulus)
+        : poly_degree(poly_degree), q(modulus), key_gen(std::make_unique<KeyGenerator>(poly_degree, modulus)), gen(std::random_device{}()) {
+        Logger::log("Initializing RingLWECrypto...", Logger::Debug, __FILE__, __LINE__, __func__);
+        try {
+            secret_key = key_gen->generate_secret_key();
+            public_key = key_gen->generate_public_key(secret_key);
+            assert(public_key.second.rows() == poly_degree && public_key.second.cols() == poly_degree);
+            Logger::log("RingLWECrypto initialized successfully.", Logger::Info, __FILE__, __LINE__, __func__);
+        } catch (const std::exception& e) {
+            Logger::log("Initialization failed: " + std::string(e.what()), Logger::Error, __FILE__, __LINE__, __func__);
+            throw;
         }
+    }
 
-        void pad_matrix(Eigen::MatrixXi& mat, int rows, int cols, int pad_val = 0) {
-            for (int i = 0; i < rows; ++i) {
-                for (int j = 0; j < cols; ++j) {
-                    if (i * cols + j >= mat.size()) {
-                        mat(i, j) = pad_val;
-                    }
-                }
-            }
-        }
-
-        std::string remove_padding(const std::string& str) {
-            size_t end = str.find('\0');
-            if (end != std::string::npos) {
-                return str.substr(0, end);
-            }
-            return str;
-        }
-        
-        Eigen::MatrixXi modulate_matrix(const Eigen::MatrixXi& mat, int mod) {
-            return mat.unaryExpr([mod](int x) { return ((x % mod) + mod) % mod; });
-        }
-    };
+    RingLWECrypto::~RingLWECrypto() {
+        Logger::log("Destroying RingLWECrypto...", Logger::Debug, __FILE__, __LINE__, __func__);
+    }
 
     std::pair<Eigen::MatrixXi, Eigen::MatrixXi> RingLWECrypto::encrypt(const std::string& plaintext) {
         try {
-            std::cout << "poly_degree: " << poly_degree << std::endl;
+            Logger::log("Encrypting plaintext: " + plaintext, Logger::Debug, __FILE__, __LINE__, __func__);
+
             Eigen::MatrixXi m = Eigen::MatrixXi::Zero(poly_degree, poly_degree);
-            std::cout << "Matrix m initialized with size: " << m.size() << std::endl;
             for (int i = 0; i < plaintext.size() && i < poly_degree * poly_degree; ++i) {
                 m(i / poly_degree, i % poly_degree) = static_cast<int>(plaintext[i]);
             }
             pad_matrix(m, poly_degree, poly_degree);
-            lattice_crypto::Logger::log("Plaintext matrix: " + vector_to_string(m), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Plaintext matrix: " + matrix_to_string(m), Logger::Debug, __FILE__, __LINE__, __func__);
 
-            // Log the random matrices e1, e2, and u
+            // Generate random matrices
             Eigen::MatrixXi e1 = key_gen->generate_random_matrix(poly_degree, poly_degree);
-            lattice_crypto::Logger::log("Random matrix (e1): " + vector_to_string(e1), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
-
             Eigen::MatrixXi e2 = key_gen->generate_random_matrix(poly_degree, poly_degree);
-            lattice_crypto::Logger::log("Random matrix (e2): " + vector_to_string(e2), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
-
             Eigen::MatrixXi u = key_gen->generate_random_matrix(poly_degree, poly_degree);
-            lattice_crypto::Logger::log("Random matrix (u): " + vector_to_string(u), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Random matrix (e1): " + matrix_to_string(e1), Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Random matrix (e2): " + matrix_to_string(e2), Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Random matrix (u): " + matrix_to_string(u), Logger::Debug, __FILE__, __LINE__, __func__);
 
-            Eigen::MatrixXi c1 = key_gen->polynomial_multiply(public_key.first, u) + e1;
-            Eigen::MatrixXi c2 = key_gen->polynomial_multiply(public_key.second, u) + e2 + m;
+            // Polynomial multiplication
+            Eigen::MatrixXi c1 = key_gen->polynomial_multiply(public_key.first, u, q) + e1;
+            Eigen::MatrixXi c2 = key_gen->polynomial_multiply(public_key.second, u, q) + e2 + m;
+
+            Logger::log("Post multiplication c1: " + matrix_to_string(c1), Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Post multiplication c2: " + matrix_to_string(c2), Logger::Debug, __FILE__, __LINE__, __func__);
 
             // Modulate the ciphertext components
             c1 = modulate_matrix(c1, q);
             c2 = modulate_matrix(c2, q);
-            
-            // Log the public keys
-            lattice_crypto::Logger::log("Public key (a): " + vector_to_string(public_key.first), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
-            lattice_crypto::Logger::log("Public key (b): " + vector_to_string(public_key.second), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
 
-            // Log the ciphertext components c1 and c2
-            lattice_crypto::Logger::log("Ciphertext c1: " + vector_to_string(c1), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
-            lattice_crypto::Logger::log("Ciphertext c2: " + vector_to_string(c2), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
-            lattice_crypto::Logger::log("Encryption completed successfully.", lattice_crypto::Logger::Info, __FILE__, __LINE__, __func__);
+            Logger::log("Ciphertext c1: " + matrix_to_string(c1), Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Ciphertext c2: " + matrix_to_string(c2), Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Encryption completed successfully.", Logger::Info, __FILE__, __LINE__, __func__);
 
             return {c1, c2};
         } catch (const std::exception& e) {
-            lattice_crypto::Logger::log("Encryption failed: " + std::string(e.what()), lattice_crypto::Logger::Error, __FILE__, __LINE__, __func__);
+            Logger::log("Encryption failed: " + std::string(e.what()), Logger::Error, __FILE__, __LINE__, __func__);
             throw;
         }
     }
@@ -284,19 +330,19 @@ namespace lattice_crypto {
             Eigen::MatrixXi c1 = ciphertext.first;
             Eigen::MatrixXi c2 = ciphertext.second;
 
-            lattice_crypto::Logger::log("Decryption started.", lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
-            lattice_crypto::Logger::log("Ciphertext c1: " + vector_to_string(c1), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
-            lattice_crypto::Logger::log("Ciphertext c2: " + vector_to_string(c2), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Decryption started.", Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Ciphertext c1: " + matrix_to_string(c1), Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Ciphertext c2: " + matrix_to_string(c2), Logger::Debug, __FILE__, __LINE__, __func__);
 
             // Decrypt the message
-            Eigen::MatrixXi m = key_gen->polynomial_multiply(c1, secret_key);
+            Eigen::MatrixXi m = key_gen->polynomial_multiply(c1, secret_key, q);
 
-            lattice_crypto::Logger::log("After Multiplication m: " + vector_to_string(m), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("After Multiplication m: " + matrix_to_string(m), Logger::Debug, __FILE__, __LINE__, __func__);
 
             m = c2 - m;
-            lattice_crypto::Logger::log("Before Modulation m: " + vector_to_string(m), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Before Modulation m: " + matrix_to_string(m), Logger::Debug, __FILE__, __LINE__, __func__);
             m = modulate_matrix(m, q);
-            lattice_crypto::Logger::log("After Modulation m: " + vector_to_string(m), lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("After Modulation m: " + matrix_to_string(m), Logger::Debug, __FILE__, __LINE__, __func__);
 
             // Convert the decrypted matrix to a string
             std::string plaintext;
@@ -305,31 +351,58 @@ namespace lattice_crypto {
             }
 
             // Remove padding
-            lattice_crypto::Logger::log("Decrypted plaintext (before padding removal): " + plaintext, lattice_crypto::Logger::Debug, __FILE__, __LINE__, __func__);
+            Logger::log("Decrypted plaintext (before padding removal): " + plaintext, Logger::Debug, __FILE__, __LINE__, __func__);
             plaintext = remove_padding(plaintext);
 
-            lattice_crypto::Logger::log("Decrypted plaintext: " + plaintext, lattice_crypto::Logger::Info, __FILE__, __LINE__, __func__);
+            Logger::log("Decrypted plaintext: " + plaintext, Logger::Info, __FILE__, __LINE__, __func__);
             return plaintext;
         } catch (const std::exception& e) {
-            lattice_crypto::Logger::log("Decryption failed: " + std::string(e.what()), lattice_crypto::Logger::Error, __FILE__, __LINE__, __func__);
-            throw; // Rethrow the exception after logging
+            Logger::log("Decryption failed: " + std::string(e.what()), Logger::Error, __FILE__, __LINE__, __func__);
+            throw;
         }
     }
 
-} // namespace lattice_crypto
+    char RingLWECrypto::normalize_char(int val) {
+        val = ((val % 256) + 256) % 256;
+        if (val < 32 || val > 126) {
+            return '?'; // Non-printable characters are replaced with '?'
+        }
+        return static_cast<char>(val);
+    }
 
+    void RingLWECrypto::pad_matrix(Eigen::MatrixXi& mat, int rows, int cols, int pad_val) {
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (i * cols + j >= mat.size()) {
+                    mat(i, j) = pad_val;
+                }
+            }
+        }
+    }
+
+    std::string RingLWECrypto::remove_padding(const std::string& str) {
+        size_t end = str.find('\0');
+        if (end != std::string::npos) {
+            return str.substr(0, end);
+        }
+        return str;
+    }
+
+    Eigen::MatrixXi RingLWECrypto::modulate_matrix(const Eigen::MatrixXi& mat, int mod) {
+        return mat.unaryExpr([mod](int x) { return ((x % mod) + mod) % mod; });
+    }
+}
 int main() {
-    // Initialize```cpp
     // Initialize the logger
     lattice_crypto::Logger::initialize("log.txt");
     std::thread logger_thread(lattice_crypto::Logger::worker);
 
     try {
-        lattice_crypto::RingLWECrypto crypto(512, 4096);
+        lattice_crypto::RingLWECrypto crypt(512, 4096);
         std::string plaintext = "Hello, Ring-LWE!";
 
-        auto ciphertext = crypto.encrypt(plaintext);
-        std::string decrypted_text = crypto.decrypt(ciphertext);
+        auto ciphertext = crypt.encrypt(plaintext);
+        std::string decrypted_text = crypt.decrypt(ciphertext);
         
         std::cout << "Decrypted text: " << decrypted_text << std::endl;
 
@@ -357,6 +430,8 @@ int main() {
 
     // Finalize the logger properly
     lattice_crypto::Logger::finalize();
-
     return EXIT_SUCCESS;
-}
+    };
+#endif // LATTICE_CRYPTO_H
+// Path: src/main.cpp
+#include "lattice_crypto.h"
