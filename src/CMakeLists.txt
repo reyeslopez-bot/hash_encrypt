@@ -20,21 +20,9 @@ execute_process(COMMAND xcrun --show-sdk-path OUTPUT_VARIABLE MACOSX_SDK_PATH OU
 set(CMAKE_OSX_SYSROOT ${MACOSX_SDK_PATH})
 
 # Find required packages
+find_package(Threads REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread)
 find_package(Eigen3 REQUIRED NO_MODULE)
-
-# Now find the threading library
-set(CMAKE_THREAD_LIBS_INIT "-lpthread")
-set(CMAKE_HAVE_THREADS_LIBRARY 1)
-set(CMAKE_USE_WIN32_THREADS_INIT 0)
-set(CMAKE_USE_PTHREADS_INIT 1)
-set(THREADS_PREFER_PTHREAD_FLAG ON)
-find_package(Threads REQUIRED)
-if(THREADS_HAVE_PTHREAD_ARG)
-  set_property(TARGET my_target PROPERTY COMPILE_OPTIONS "-pthread")
-  set_property(TARGET my_target PROPERTY INTERFACE_COMPILE_OPTIONS "-pthread")
-endif()
-
 
 # Include directories
 include_directories(${Boost_INCLUDE_DIRS})
@@ -43,5 +31,18 @@ include_directories(${EIGEN3_INCLUDE_DIR})
 # Define the executable
 add_executable(LatticeCrypto lattice_crypto.cpp)
 
-# Link libraries to the executable, including the Threads library
+# Link libraries to the executable
 target_link_libraries(LatticeCrypto ${Boost_LIBRARIES} Eigen3::Eigen Threads::Threads)
+
+# Ensure runtime directory is correctly set
+set_target_properties(LatticeCrypto PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
+)
+
+# Custom target to run the program and filter output for 'ERROR'
+add_custom_target(run_with_filter
+    COMMAND ./LatticeCrypto | grep "ERROR"
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT "Running LatticeCrypto and filtering output for 'ERROR'"
+    DEPENDS LatticeCrypto
+)
