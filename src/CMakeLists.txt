@@ -41,7 +41,7 @@ set_target_properties(LatticeCrypto PROPERTIES
 
 # Custom target to run the program and filter output for 'ERROR'
 add_custom_target(run_with_filter
-    COMMAND ./LatticeCrypto | grep "ERROR"
+    COMMAND ${CMAKE_BINARY_DIR}/LatticeCrypto | grep "ERROR" || true
     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
     COMMENT "Running LatticeCrypto and filtering output for 'ERROR'"
     DEPENDS LatticeCrypto

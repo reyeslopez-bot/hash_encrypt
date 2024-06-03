@@ -129,6 +129,19 @@ LatticeCrypto/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LatticeCrypto.dir/build.make CMakeFiles/LatticeCrypto.dir/build
 .PHONY : LatticeCrypto/fast
 
+#=============================================================================
+# Target rules for targets named run_with_filter
+
+# Build rule for target.
+run_with_filter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_with_filter
+.PHONY : run_with_filter
+
+# fast build rule for target.
+run_with_filter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_with_filter.dir/build.make CMakeFiles/run_with_filter.dir/build
+.PHONY : run_with_filter/fast
+
 lattice_crypto.o: lattice_crypto.cpp.o
 .PHONY : lattice_crypto.o
 
@@ -161,6 +174,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... run_with_filter"
 	@echo "... LatticeCrypto"
 	@echo "... lattice_crypto.o"
 	@echo "... lattice_crypto.i"

@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/apikorus/hash_encrypt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/apikorus/hash_encrypt/src
+CMAKE_BINARY_DIR = /Users/apikorus/hash_encrypt/src/build
 
 # Utility rule file for run_with_filter.
 
@@ -67,8 +67,8 @@ include CMakeFiles/run_with_filter.dir/compiler_depend.make
 include CMakeFiles/run_with_filter.dir/progress.make
 
 CMakeFiles/run_with_filter: LatticeCrypto
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/apikorus/hash_encrypt/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running LatticeCrypto and filtering output for 'ERROR'"
-	/Users/apikorus/hash_encrypt/src/LatticeCrypto | grep ERROR || true
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/apikorus/hash_encrypt/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running LatticeCrypto and filtering output for 'ERROR'"
+	/Users/apikorus/hash_encrypt/src/build/LatticeCrypto | grep ERROR || true
 
 run_with_filter: CMakeFiles/run_with_filter
 run_with_filter: CMakeFiles/run_with_filter.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/run_with_filter.dir/clean:
 .PHONY : CMakeFiles/run_with_filter.dir/clean
 
 CMakeFiles/run_with_filter.dir/depend:
-	cd /Users/apikorus/hash_encrypt/src && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/apikorus/hash_encrypt/src /Users/apikorus/hash_encrypt/src /Users/apikorus/hash_encrypt/src /Users/apikorus/hash_encrypt/src /Users/apikorus/hash_encrypt/src/CMakeFiles/run_with_filter.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/apikorus/hash_encrypt/src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/apikorus/hash_encrypt/src /Users/apikorus/hash_encrypt/src /Users/apikorus/hash_encrypt/src/build /Users/apikorus/hash_encrypt/src/build /Users/apikorus/hash_encrypt/src/build/CMakeFiles/run_with_filter.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/run_with_filter.dir/depend
 

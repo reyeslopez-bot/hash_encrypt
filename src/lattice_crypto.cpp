@@ -383,8 +383,15 @@ int main() {
     try {
         RingLWECrypto crypt(512, 4096);
         std::string plaintext = "Hello, Ring-LWE!";
-
+        std::cout << "Plaintext: " << plaintext << std::endl;
+        
         auto ciphertext = crypt.encrypt(plaintext);
+        
+        // Display encrypted text
+        std::cout << "Encrypted text (c1): " << matrix_to_string(ciphertext.first) << std::endl;
+        std::cout << "Encrypted text (c2): " << matrix_to_string(ciphertext.second) << std::endl;
+
+        
         std::string decrypted_text = crypt.decrypt(ciphertext);
 
         std::cout << "Decrypted text: " << decrypted_text << std::endl;
